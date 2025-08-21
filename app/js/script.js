@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 const lightRadioButton = document.getElementById("light");
 const darkRadioButton = document.getElementById("dark");
 
-const getColorMode = () => {
+const setColorMode = () => {
   let colorMode = localStorage.getItem("colorMode");
   if (!colorMode) {
     body.classList = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -34,6 +34,6 @@ radioButtons.forEach((element) => {
 
 window
   .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", getColorMode);
+  .addEventListener("change", setColorMode);
 
-getColorMode();
+setColorMode();
