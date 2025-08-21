@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link
       rel="icon"
       type="image/png"
@@ -21,9 +20,8 @@
 
     <link rel="stylesheet" href="dist/style.css" />
     <script src="app/js/script.js" defer></script>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
-  <body>
+  <body class="">
     <header class="header container">
       <div class="header__title">
         <h1>Social Media Dashboard</h1>
@@ -34,16 +32,16 @@
         aria-label="theme-toggle"
         role="radiogroup"
       >
+        <label for="dark"
+          >Dark Mode <span class="visually-hidden">On</span></label
+        >
         <div class="toggle__wrapper">
-          <input type="radio" name="theme" id="dark" />
-          <input type="radio" name="theme" id="system" checked />
+          <input type="radio" name="theme" id="dark" checked />
           <input type="radio" name="theme" id="light" />
           <span aria-hidden="true" class="toggle__background"></span>
           <span aria-hidden="true" class="toggle__button"></span>
         </div>
-        <label for="dark">Dark</label>
-        <label for="system">System</label>
-        <label for="light">Light</label>
+        <label for="light" class="visually-hidden">Light Mode Off</label>
       </fieldset>
     </header>
     <main>
